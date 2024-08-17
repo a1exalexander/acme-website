@@ -15,13 +15,6 @@ button, input, textarea, select {
   font-family: inherit;
 }
 
-button, a {
-  text-decoration: none;
-  outline: none;
-  border: none;
-  background-color: transparent;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
