@@ -11,12 +11,11 @@ collections:
     files:
       - label: "Home Page"
         name: "home"
-        format: "json",
         file: "index.json"
         fields:
-          - label: 'SEO'
-            name: 'seo'
-            widget: 'object'
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Description, name: description, widget: string }
@@ -25,9 +24,9 @@ collections:
         name: "about"
         file: "about/about.json"
         fields:
-          - label: 'SEO'
-            name: 'seo'
-            widget: 'object'
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Description, name: description, widget: string }
