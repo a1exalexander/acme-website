@@ -42,3 +42,11 @@ collections:
       - {label: Title, name: title, widget: string}
       - {label: Description, name: description, widget: string}
     - {label: Title, name: title, widget: string}
+    - label: "Form"
+      name: "form"
+      widget: "object"
+      fields:
+      - {label: Name, name: name, widget: string}
+      - {label: Email, name: email, widget: string}
+      - {label: Message, name: message, widget: string}
+      - {label: Submit, name: submit, widget: string}
