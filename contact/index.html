@@ -5,29 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/css/common.css">
     <link rel="stylesheet" href="./contact.css">
-    <title>Document</title>
+    <title>{{ contact.seo.title }}</title>
+    <meta name="description" content="{{ contact.seo.description }}">
 </head>
 <body>
-    <h1>Contact</h1>
+    <h1>{{ contact.title }}</h1>
     <nav>
-        <a href="/">Home</a>
+        <a href="/">{{ home.title }}</a>
     </nav>
     <br>
     <form name="contact" netlify>
         <p>
-          <label>Name</label><br>
-          <input type="text" name="name" />
+          <label for="name">{{ contact.form.name }}</label><br>
+          <input id="name" type="text" name="name" />
         </p>
         <p>
-          <label>Email</label><br>
-          <input type="email" name="email" />
+          <label for="email">{{ contact.form.email }}</label><br>
+          <input id="email" type="email" name="email" />
         </p>
         <p>
-          <label>Message</label><br>
-          <textarea name="message"></textarea>
+          <label for="message">{{ contact.form.message }}</label><br>
+          <textarea id="message" name="message"></textarea>
         </p>
         <p>
-          <button type="submit">Send request</button>
+          <button type="submit">{{ contact.form.submit }}</button>
         </p>
       </form>
     <script type="module" src="../src/js/main.js"></script>

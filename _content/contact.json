@@ -3,5 +3,11 @@
     "title": "Contact",
     "description": "Contact website page"
   },
-  "title": "Contact"
+  "title": "Contact",
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Submit"
+  }
 }

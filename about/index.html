@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/css/common.css">
     <link rel="stylesheet" href="./about.css">
-    <title>Document</title>
+    <title>{{ about.seo.title }}</title>
+    <meta name="description" content="{{ about.seo.description }}">
 </head>
 <body>
-    <h1>About Us</h1>
+    <h1>{{ about.title }}</h1>
     <nav>
-        <a href="/">Home</a>
+        <a href="/">{{ home.title }}</a>
     </nav>
     <script type="module" src="../src/js/main.js"></script>
     <script type="module" src="./about.js"></script>
