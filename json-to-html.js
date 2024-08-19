@@ -22,18 +22,18 @@ function findHtmlFiles(dir) {
     return results;
   }
 
-function loadJson(filePath) {
+function loadJson(filePath) {  
   const absolutePath = path.join(__dirname, inputFolder, filePath);
   return JSON.parse(fs.readFileSync(absolutePath, 'utf-8'));
 }
 
 function getValueFromJson(json, jsonPath) {
-  return jsonPath.split('.').reduce((acc, part) => acc && acc[part], json);
+  return jsonPath.reduce((acc, part) => acc && acc[part], json);
 }
 
-function replacePlaceholders(htmlContent) {
+function replacePlaceholders(htmlContent) {  
   return htmlContent.replace(/{{\s*(.*?)\s*}}/g, (match, p1) => {
-    const [jsonFileName, jsonKeyPath] = p1.split('.').map(str => str.trim());
+    const [jsonFileName, ...jsonKeyPath] = p1.split('.').map(str => str.trim());
     const jsonData = loadJson(`${jsonFileName}.json`);
     return getValueFromJson(jsonData, jsonKeyPath) || match;
   });
@@ -45,7 +45,7 @@ const htmlFiles = findHtmlFiles(distDir);
 
 htmlFiles.forEach(htmlFilePath => {
   let htmlContent = fs.readFileSync(htmlFilePath, 'utf-8');
-
+  
   htmlContent = replacePlaceholders(htmlContent);
 
   fs.writeFileSync(htmlFilePath, htmlContent, 'utf-8');
