@@ -11,7 +11,7 @@ collections:
   files:
   - label: "Home Page"
     name: "home"
-    file: "index.json"
+    file: "_content/home.json"
     fields:
     - label: "SEO"
       name: "seo"
@@ -22,7 +22,18 @@ collections:
     - {label: Title, name: title, widget: string}
   - label: "About Page"
     name: "about"
-    file: "about/about.json"
+    file: "_content/about.json"
+    fields:
+    - label: "SEO"
+      name: "seo"
+      widget: "object"
+      fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Description, name: description, widget: string}
+    - {label: Title, name: title, widget: string}
+  - label: "Contact Page"
+    name: "contact"
+    file: "_content/contact.json"
     fields:
     - label: "SEO"
       name: "seo"

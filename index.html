@@ -15,7 +15,11 @@
     <title>ACME FE 134</title>
   </head>
   <body>
-    <div id="home-root"></div>
+    <h1>{{ home.title }}</h1>
+    <nav>
+        <a href="/contact/">{{ contact.title }}</a>
+        <a href="/about/">{{ about.title }}</a>
+    </nav>
     <script type="module" src="./src/js/home.js"></script>
     <script type="module" src="./src/js/main.js"></script>
   </body>

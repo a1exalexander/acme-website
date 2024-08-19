@@ -2,7 +2,6 @@ import { resolve } from "path";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "",
   build: {
     rollupOptions: {
       input: {
@@ -11,5 +10,5 @@ export default defineConfig({
         contact: resolve(__dirname, "contact/index.html"),
       },
     },
-  },
+  }
 });
