@@ -18,3 +18,14 @@ The application will be available at http://localhost:8080
 ```bash
 docker build -t acme-website . && docker run -p 8080:8080 acme-website
 ```
+
+### Stop the container
+```bash
+# Find the container ID
+docker ps
+
+# Stop the container
+docker stop <CONTAINER ID>
+```
+
+Or use Ctrl+C if running in foreground mode.
