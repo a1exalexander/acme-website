@@ -21,6 +21,7 @@ RUN npm install -g vite
 COPY --from=builder /app/dist ./dist
 
 # Expose port used by `vite preview`
-EXPOSE 4173
+EXPOSE 8080
 
 # Serve the built app
+CMD ["vite", "preview", "--host", "0.0.0.0", "--port", "8080"]
