@@ -1,15 +1,13 @@
 import { resolve } from "path";
 import { defineConfig } from "vite";
+import dns from 'node:dns'
+
+dns.setDefaultResultOrder('verbatim');
 
 export default defineConfig({
   server: {
-    host: '0.0.0.0',
-    allowedHosts: true
-  },
-  preview: {
-    host: '0.0.0.0',
-    port: 8080,
-    allowedHosts: true
+    allowedHosts: true,
+    cors: true,
   },
   build: {
     rollupOptions: {
